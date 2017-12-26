@@ -32,6 +32,11 @@ IPM will connect to IOTA endpoint and produce the status at localhost port 8888
 To view the dashboard, simply open a browser and point to http://127.0.0.1:8888
 
 ``` 
+
+### As a daemon using systemd
+Copy the file located in systemd/iota-pm.service to /etc/systemd/system/iota-pm.service, modifying the parameters to match your setup.
+Run `systemctl daemon-reload` for reloading your configuration. From here on you can use normal start/stop/status commands to manage iota-pm as a daemon.
+
 ## Persistent Tag
 
 Any custom tag assigned to a peer will be saved inside user's home directory in file iota-pm.conf
@@ -40,7 +45,3 @@ In Windows this will be C:\Users\username and Linux it will be $HOME. If none of
 ## Peer management
 The program doesn't manages peers configured in IRI config files. If you delete or add a peer via the UI, please make sure to update it also in the IRI config. 
 
-## Donation
-If you like the project and wish to see more features being added, please consider donating at address mentioned below
-
-https://gist.github.com/akashgoswami/a7f0ae2daa1c97e4060e9c7296cfa7f3
